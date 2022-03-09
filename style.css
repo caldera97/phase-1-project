@@ -6,7 +6,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #111;
 }
-.row_posters img {
+#thumbnailDiv img {
     width: 100%;
     object-fit: contain;
     max-height: 150px;
@@ -15,20 +15,20 @@ body {
 }
 /*above was being finicky till i added img to the end */ 
 
-.row_posters {
+#thumbnailDiv {
     overflow-x: scroll;
     overflow-y: hidden;
     padding: 20px;
     display: flex;
 }
-.row_posters img:hover {
+#thumbnailDiv img:hover {
     transform: scale(1.08);
 }
 /*whole row would scale up unless i specify image */
-.row_posters::-webkit-scrollbar {
+#thumbnailDiv::-webkit-scrollbar {
     display:none;
 }
-.row_posters .large_poster {
+#thumbnailDiv .large_poster {
     max-height: 250px;
 }
 .row {
@@ -85,6 +85,6 @@ body {
     height: 7.4rem;
     background-image: linear-gradient(180deg, transparent, rgba(37, 37, 37, 0.61), #111);
 }
-.originals {
+.thumbnails {
     padding-top: 20px;
 }
