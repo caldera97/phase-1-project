@@ -5,7 +5,7 @@ fetch("https://api.artic.edu/api/v1/artworks").then(res => res.json())
 function renderArtData(artData) {
     const thumbnailElement = document.querySelector("#thumbnailDiv")
     const artDataArray = [artData]
-    for (let i=0; i<11; i++) {
+    for (let i=0; i<12; i++) {
         {
             if ((artData.data[i].image_id) !== null) {
                 console.log(artData.data[i])
