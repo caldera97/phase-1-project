@@ -9,7 +9,11 @@ function renderArtData(artData) {
     for (let i=0; i<12; i++) {
         {
             if ((artData.data[i].image_id) !== null) {
+                // console.log(artData.data[i])
+                // console.log(artData.data[i].artist_title)
                 const artIdElement = document.createElement("img")
+                // console.log(artIdElement)
+
                 thumbnailElement.appendChild(artIdElement)
                 artIdElement.id = artData.data[i].id
                 artIdElement.src = `https://www.artic.edu/iiif/2/${artData.data[i].image_id}/full/843,/0/default.jpg`
@@ -21,15 +25,10 @@ function renderArtData(artData) {
 
 }
 
-function bigArt(event, artDataArray) {
-    const bannerDiv = document.querySelector("#imgContainer")
-    bannerDiv.innerHTML = ""
-    const bannerImg = document.createElement("img")
-    console.log(artDataArray)
-    //path to image ID is e.path[0].id
-    const artInfo = artDataArray.find(e => e.id == event.path[0].id)
-    console.log(artInfo)
-    bannerDiv.append(bannerImg)
-    bannerImg.src = `https://www.artic.edu/iiif/2/${artInfo.image_id}/full/843,/0/default.jpg`
 
+
+function bigArt(event) {
+ console.log("hello");
 }
+
+
