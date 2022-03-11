@@ -49,15 +49,19 @@ img {
   max-height: 250px;
 }
 .row {
+
   color: rgb(6, 97, 14);
   margin-left: 20px;
+
 }
+/* .banner  */
 .banner {
   background-size: cover;
   background-position: center center;
   color: rgb(6, 97, 14);
   object-fit: contain;
   height: 200px;
+
 }
 .banner_contents {
   margin-left: 30px;
@@ -113,3 +117,4 @@ img {
     #111
   );
 } */
+
