@@ -1,3 +1,4 @@
+
 let artData = null
 const bookmarkDropdown = document.querySelector("#bookmarks")
 const selectBar = document.querySelector("#bookmarks")
@@ -21,17 +22,18 @@ function renderArtData(newartData) {
             if ((newartData.data[i].image_id) !== null) {
                 // console.log(artData.data[i])
                 // console.log(artData.data[i].artist_title)
-                const artIdElement = document.createElement("img")
+                const artIdElement = document.createElement("img");
                 // console.log(artIdElement)
 
                 thumbnailElement.appendChild(artIdElement)
+
                 artIdElement.id = newartData.data[i].id
                 artIdElement.src = `https://www.artic.edu/iiif/2/${newartData.data[i].image_id}/full/843,/0/default.jpg`
                 artIdElement.addEventListener('click', () => bigArt(event, i, 0))
             } 
-        }
-       
+        } 
     }
+
     countPage()
     return artData
 }
@@ -129,6 +131,18 @@ function pageForward(pageEvent) {
     countPage()
     return currentPage
 }
+const commentUl = document.querySelector('#comment-ul');
+const commentForm = document.querySelector('#comment-list');
+commentForm.addEventListener('submit', (e) =>{
+    e.preventDefault();
+    const commentInput = document.querySelector('#comment-input').value;
+    const newLi = document.createElement('li');
+    newLi.append(commentInput);
+    commentUl.append(newLi);
+    commentForm.reset();
+})
+
+})
 
 const backButton = document.querySelector("#backPage")
 backButton.addEventListener("click",e => pageBack(e) )
@@ -172,3 +186,4 @@ function selectBookmark(title) {
     const book = bookmarks.find(element => element[0].title == booktitle)
     bigArt(book[0], null, 1)
 }
+
