@@ -4,7 +4,7 @@
         <title>The Archive</title>
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./style.css" />
-        <script src="index.js"></script>
+        <script defer src="index.js"></script>
     </head>
     <body>
        
@@ -25,18 +25,21 @@
         
         <div class = "row">
             <h2 class="thumbnails">Art Collection</h2>
-        <div id="thumbnailDiv" ></div>
-        <div class="popupImageDiv">
-    
+
         </div>
-     
-        
-        <!-- big details! -->
-        <div>
-            <!-- <ion-icon name="heart-outline"></ion-icon> -->
-       
-        </div>
-            
+            <div id="thumbnailDiv" > </div>
+
+            <div id="float" style = "display:none">
+            big details! 
+            </div> 
+            <div id="pageButtons">
+                <button type ="button" id="backPage" class="pageButtons">&lt;</button>
+                <button type ="button" id="frontPage" class = "pageButtons">&gt;</button>
+            </div>
+            <div id="pageCount"></div>
+            <label for="bookmarks">Bookmarks:</label>
+            <select name="bookmarks" id="bookmarks">
+            </select>
         </div>
       
         <!-- <div class="art-detailsBox">

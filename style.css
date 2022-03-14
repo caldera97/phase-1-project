@@ -22,8 +22,9 @@ body {
 #thumbnailDiv img {
   width: 400%;
   object-fit: contain;
-  max-height: 550px;
-  /* margin-right: 10px; */
+
+  max-height: 30vh;
+  margin-right: 10px;
   transition: transform 450ms;
   padding-left: 10px;
   padding-right: 0.5px;
@@ -80,27 +81,7 @@ body {
 #main-content p:hover {
   background-color: rgb(231, 228, 228);
 }
-/* .art-detailsBox {
-  overflow-x: scroll;
-  overflow-y: hidden;
-  background-color: rgb(246, 243, 243);
-  position: relative;
-  max-height: 200px;
-  max-width: 385px;
-  top: 600px;
-  padding: 30px;
-  padding-bottom: 5px;
-  margin-left: 60px;
-  margin-bottom: 25px;
-}
 
-.art-detailsBox h2 {
-  color: rgb(6, 97, 14);
-}
-
-.art-detailsBox:hover {
-  background-color: rgb(224, 224, 224, 0.5);
-} */
 .row {
 
   color: rgb(6, 97, 14);
@@ -235,20 +216,81 @@ body {
 #reload .md.hydrated {
   text-align: center;
 }
-/* .ionicon.s-ion-icon {
-  background-color: teal;
-  padding: 1em;
-  border-radius: 50%;
-  border: 2px solid;
-} */
-/* .banner_fade {
-  margin-top: 145px;
-  height: 7.4rem;
-  background-image: linear-gradient(
-    180deg,
-    transparent,
-    rgba(37, 37, 37, 0.61),
-    #111
-  );
-} */
 
+#float {
+z-index: 50;
+position: absolute;
+height: 80vh;
+width: 140vh;
+top: 10%;
+left: 10%;
+background-color: bisque;
+border-radius: 1vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.bigImage {
+max-width: 70vh;
+max-height: 65vh;
+object-fit: contain;
+float: inline-start;
+position: relative;
+padding-left: 40px;
+margin: auto;
+padding-top: 10%;
+vertical-align: baseline;
+}
+#exit {
+  position:absolute;
+  top: 30px;;
+  right:30px;
+  background-color:#0a0a23;
+  color: #fff;
+  border:none;
+  border-radius:10px;
+  box-shadow: 0px 0px 2px 2px rgb(0,0,0)
+}
+
+#title {
+  object-fit: contain;
+  position: absolute;
+  font-size: 2em;
+  max-width: 70vh;
+  padding-left: 40px;
+  bottom: 30px;
+}
+#artist {
+  position: absolute;
+  top: 100px;
+  right:300px;
+  font-size: 2em;
+  margin-left: 80%;
+  width: fit-content;
+}
+#dateDisplayed {
+  font-size: large;
+  position: relative;
+  padding-top: 15px;
+}
+#artType {
+  padding-top: 15px;
+}
+#dimensions {
+  padding-top: 15px;
+  position: absolute;
+}
+.pageButtons {
+  padding: 0px;
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;;
+  margin-left: 15px;
+}
+#pageCount {
+  padding-left: 1.5rem;
+}
