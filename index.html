@@ -7,28 +7,54 @@
         <script src="index.js"></script>
     </head>
     <body>
+       
         <!-- Header -->
         <div class="banner">
             <div class="banner_contents">
                 <h1 class="banner_title">The Archive</h1>
             <div class="banner_description">A modern solution to art history</div>
+            <button id='reload'><ion-icon name="refresh-circle-outline"></ion-icon></button>
+            <div id="imgContainer">
+
+            </div>
+            
             </div>
             <!-- <div class="banner_fade"></div> -->
         </div>
         <!-- Randoms -->
+        
         <div class = "row">
             <h2 class="thumbnails">Art Collection</h2>
-        <div id="thumbnailDiv" >
-            
-
+        <div id="thumbnailDiv" ></div>
+        <div class="popupImageDiv">
+    
         </div>
-
-        </div>
+     
+        
         <!-- big details! -->
         <div>
+            <!-- <ion-icon name="heart-outline"></ion-icon> -->
+       
+        </div>
             
         </div>
+      
+        <!-- <div class="art-detailsBox">
+            <h2>Details</h2>
+        </div> -->
+
+        <div class="comment-box">
+            <h2>Thoughts?</h2>
+            <ul id="comment-ul"> 
+            </ul>
+
+            <form id="comment-list" action="#">
+                <textarea name="comment" id='comment-input' placeholder="Type here..."></textarea>
+                <button type="submit">submit</button>
+            </form>
+        </div>
+
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </body>
 </html>

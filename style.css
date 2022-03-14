@@ -7,11 +7,11 @@ body {
   background-color: rgb(246, 243, 243);
 }
 
-img {
+/* img {
   height: 450%;
   width: 350%;
   object-fit: cover;
-}
+} */
 
 .thumbnails {
   padding-top: 20px;
@@ -23,20 +23,25 @@ img {
   width: 400%;
   object-fit: contain;
   max-height: 550px;
-  margin-right: 10px;
+  /* margin-right: 10px; */
   transition: transform 450ms;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 10px;
+  padding-right: 0.5px;
   padding-top: 3px;
   padding-bottom: 3px;
+  cursor: pointer;
+  object-fit: cover;
 }
 /*above was being finicky till i added img to the end */
 
 #thumbnailDiv {
   overflow-x: scroll;
-  overflow-y: hidden;
+  overflow-y: scroll;
   padding: 20px;
   display: flex;
+  object-position: center center;
+  position: absolute;
+  width: 1800px;
 }
 #thumbnailDiv img:hover {
   transform: scale(1.08);
@@ -48,6 +53,54 @@ img {
 #thumbnailDiv .large_poster {
   max-height: 250px;
 }
+#imageContainer {
+  height: 190px;
+}
+
+#main-content {
+  font-size: 18px;
+  color: black;
+  max-width: 800px;
+  max-height: 200px;
+  position: relative;
+  top: 600px;
+  right: 268px;
+  text-align: left;
+  display: inline-block;
+  cursor: pointer;
+}
+
+#main-content p {
+  background-color: rgb(246, 243, 243);
+  position: relative;
+  right: 100px;
+  width: 300px;
+  text-align: center;
+}
+#main-content p:hover {
+  background-color: rgb(231, 228, 228);
+}
+/* .art-detailsBox {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  background-color: rgb(246, 243, 243);
+  position: relative;
+  max-height: 200px;
+  max-width: 385px;
+  top: 600px;
+  padding: 30px;
+  padding-bottom: 5px;
+  margin-left: 60px;
+  margin-bottom: 25px;
+}
+
+.art-detailsBox h2 {
+  color: rgb(6, 97, 14);
+}
+
+.art-detailsBox:hover {
+  background-color: rgb(224, 224, 224, 0.5);
+} */
 .row {
   color: rgb(6, 97, 14);
   margin-left: 20px;
@@ -71,7 +124,7 @@ img {
   flex-direction: column;
   font-size: 3rem;
   font-weight: 800;
-  padding-bottom: 0.3rem;
+  /* padding-bottom: 0.3rem; */
   position: relative;
 }
 
@@ -80,9 +133,9 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
-  padding-top: 0.01rem;
-  padding-bottom: 1rem;
+  font-size: 16.5px;
+  padding-top: -0.5%;
+  /* padding-bottom: 1rem; */
 }
 .banner_button {
   cursor: pointer;
@@ -103,6 +156,87 @@ img {
   transform: scale(1.09);
   transition: 500ms;
 }
+
+.comment-box {
+  color: rgb(6, 97, 14);
+  top: 97%;
+  left: 10%;
+  width: 200px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  padding-left: 5px;
+  padding-bottom: 20px;
+}
+
+.comment-box h2 {
+  padding-top: 220px;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.comment-box input {
+  width: 100%;
+  height: 50px;
+  padding: 0 20px;
+  margin-top: -10px;
+  margin-bottom: 25px;
+  border-radius: 5px;
+  border: 1px solid rgb(6, 97, 14);
+}
+
+.comment-box textarea {
+  width: 150%;
+  height: 250%;
+  padding: 15 px 20px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid rgb(6, 97, 14);
+}
+.comment-box button {
+  max-width: 180px;
+  max-height: 72px;
+  border: 0;
+  padding: 10px 30px;
+  background: rgb(6, 97, 14);
+  font-size: 18px;
+  color: white;
+  border-radius: 5px;
+}
+
+.comment-box button:hover {
+  background-color: rgb(23, 156, 35);
+}
+
+.comment-box #comment-ul {
+  left: 250%;
+  width: 900px;
+  height: auto;
+  position: relative;
+}
+
+#reload {
+  max-width: 150px;
+  max-height: 65px;
+  border: 0;
+  padding: 10px 30px;
+  background: rgb(246, 243, 243);
+  font-size: 40px;
+  color: rgb(6, 97, 14);
+  border-radius: 5px;
+  margin-left: 788px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+#reload .md.hydrated {
+  text-align: center;
+}
+/* .ionicon.s-ion-icon {
+  background-color: teal;
+  padding: 1em;
+  border-radius: 50%;
+  border: 2px solid;
+} */
 /* .banner_fade {
   margin-top: 145px;
   height: 7.4rem;
