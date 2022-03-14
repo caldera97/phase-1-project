@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function renderArtData(artData) {
     const thumbnailElement = document.querySelector("#thumbnailDiv");
     const bigArtDiv = document.querySelector(".popupImageDiv");
+    // const thumbnailElement = document.querySelector("#thumbnailDiv")
     let artDataArray = [artData]
     artDataArray= artDataArray[0].data
     for (let i=0; i<12; i++) {
@@ -25,6 +26,7 @@ function renderArtData(artData) {
                 // console.log(artData.data[i].artist_title)
                 const artIdElement = document.createElement("img");
                 // console.log(artIdElement)
+
                 thumbnailElement.appendChild(artIdElement)
                 artIdElement.id = artData.data[i].id
                 artIdElement.src = `https://www.artic.edu/iiif/2/${artData.data[i].image_id}/full/843,/0/default.jpg`
@@ -92,6 +94,7 @@ function renderArtData(artData) {
                 // console.log(artOriginEl);
 
             
+                // artIdElement.addEventListener('click', () => bigArt(event, artDataArray))
             } 
         } 
     }
@@ -101,6 +104,10 @@ function renderArtData(artData) {
 function bigArt(event, artDataArray) {
     console.log('helloo');
     bigArtDiv = artDataArray;
+
+function bigArt(event) {
+ console.log("hello");
+}
 
 //     const bannerDiv = document.querySelector("#imgContainer")
 //     bannerDiv.innerHTML = ""
