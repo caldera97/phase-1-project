@@ -4,7 +4,7 @@
         <title>The Archive</title>
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./style.css" />
-        <script src="index.js"></script>
+        <script defer src="index.js"></script>
     </head>
     <body>
         <!-- Header -->
@@ -18,15 +18,20 @@
         <!-- Randoms -->
         <div class = "row">
             <h2 class="thumbnails">Art Collection</h2>
-        <div id="thumbnailDiv" >
-            
-
         </div>
+            <div id="thumbnailDiv" > </div>
 
-        </div>
-        <!-- big details! -->
-        <div>
-            
+            <div id="float" style = "display:none">
+            big details! 
+            </div> 
+            <div id="pageButtons">
+                <button type ="button" id="backPage" class="pageButtons">&lt;</button>
+                <button type ="button" id="frontPage" class = "pageButtons">&gt;</button>
+            </div>
+            <div id="pageCount"></div>
+            <label for="bookmarks">Bookmarks:</label>
+            <select name="bookmarks" id="bookmarks">
+            </select>
         </div>
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
