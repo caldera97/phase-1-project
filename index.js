@@ -142,8 +142,6 @@ commentForm.addEventListener('submit', (e) =>{
     commentForm.reset();
 })
 
-})
-
 const backButton = document.querySelector("#backPage")
 backButton.addEventListener("click",e => pageBack(e) )
 function pageBack(pageEvent) {
